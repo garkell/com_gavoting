@@ -203,7 +203,7 @@ class GavotingHelper
 		$query->select(' value ');
 		$query->from(' #__fields_values ');
 		$query->where(' field_id = '.(int) $field_id );
-		$query->where(' item_id = '.(int) $user_id );
+		$query->where(' item_id = '.$db->quote($user_id) );
 		$db->setQuery((string)$query);
 
 	    try {

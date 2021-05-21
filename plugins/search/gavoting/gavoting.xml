@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search" method="upgrade">
+    <name>plg_search_gavoting</name>
+    <author>Glenn Arkell</author>
+    <creationDate>06 July 2020</creationDate>
+    <copyright>Copyright (C) 2020. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>glenn@glennarkell.com.au</authorEmail>
+    <authorUrl>http://www.glennarkell.com.au</authorUrl>
+    <version>1.4.04</version>
+    <description>PLG_SEARCH_COM_GAVOTING_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="gavoting">gavoting.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_search_gavoting.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_search_gavoting.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_GAVOTING_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_GAVOTING_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

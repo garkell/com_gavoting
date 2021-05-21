@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+   <update>
+      <name>Election Voting Management</name>
+      <description>Election Voting Management System</description>
+      <element>com_gavoting</element>
+      <type>component</type>
+      <version>1.4.04</version>
+
+      <infourl title="Election Voting Management URL">http://www.glennarkell.com.au/index.php/voting-mgmt-system</infourl>
+      <downloads>
+         <downloadurl type="full" format="zip">http://www.glennarkell.com.au/joomlaorg/components/com_gavoting-1.4.04.zip</downloadurl>
+      </downloads>
+      <tags>
+         <tag>stable</tag>
+      </tags>
+
+      <maintainer>Glenn Arkell</maintainer>
+      <maintainerurl>http://www.glennarkell.com.au</maintainerurl>
+      <section>some-section-unused</section>
+      <targetplatform name="joomla" version="3.9|10" />
+   </update>
+
+</updates>

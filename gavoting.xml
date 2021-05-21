@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.9" method="upgrade">
+    <name>com_gavoting</name>
+    <creationDate>06 July 2020</creationDate>
+    <copyright>2020 Glenn Arkell</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Glenn Arkell</author>
+    <authorEmail>glenn@glennarkell.com.au</authorEmail>
+    <authorUrl>http://www.glennarkell.com.au</authorUrl>
+    <version>1.4.04</version>
+    <description>COM_GAVOTING_XML_DESCRIPTION</description>
+    
+	<scriptfile>script.php</scriptfile>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql/</schemapath>
+		</schemas>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>gavoting.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+
+    <media destination="com_gavoting" folder="media">
+        <folder>js</folder>
+		<folder>images</folder>
+        <folder>css</folder>
+    </media>
+
+    <languages folder="site/language">
+			<language tag="en-GB">en-GB/en-GB.com_gavoting.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_gavoting.ini</language>
+    </languages>
+
+    <administration>
+        <menu>COM_GAVOTING</menu>
+        <submenu>
+			<menu link="option=com_gavoting&amp;view=positions" view="positions" alt="Gavoting/Positions">COM_GAVOTING_TITLE_POSITIONS</menu>
+			<menu link="option=com_gavoting&amp;view=nominations" view="nominations" alt="Gavoting/Nominations">COM_GAVOTING_TITLE_NOMINATIONS</menu>
+			<menu link="option=com_gavoting&amp;view=voters" view="voters" alt="Gavoting/Voters">COM_GAVOTING_TITLE_VOTERS</menu>
+			<menu link="option=com_gavoting&amp;view=motions" view="motions" alt="Gavoting/Motions">COM_GAVOTING_TITLE_MOTIONS</menu>
+			<menu link="option=com_categories&amp;extension=com_gavoting" view="electyears" img="media/com_gavoting/images/s_types.png" alt="Gavoting/Electyears">COM_GAVOTING_TITLE_CATEGORIES</menu>
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>gavoting.php</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_gavoting.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_gavoting.sys.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_gavoting.ini</language>
+			<language tag="it-IT">it-IT/it-IT.com_gavoting.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="gavoting"/>
+    </plugins>
+    
+    <modules>
+		<module module="mod_gavoting" />
+	</modules>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Voting">http://www.glennarkell.com.au/joomlaorg/components/gavoting-update.xml</server>
+	</updateservers>
+
+</extension>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_GAVOTING_TITLE_LIST_VIEW_NOMINATIONS" option="View">
+        <message>
+                        <![CDATA[COM_GAVOTING_TITLE_LIST_VIEW_NOMINATIONS_DESC]]>
+        </message>
+	</layout>
+	<fields name="params">
+        <fieldset name="regions">
+            <field
+                name="region_id" type="regions" size="1" default="0"
+                label="COM_GAVOTING_FORM_LBL_NOMINATION_REGION_ID"
+                description="COM_GAVOTING_FORM_DESC_NOMINATION_REGION_ID" >
+            </field>
+    	</fieldset>
+	</fields>
+</metadata>

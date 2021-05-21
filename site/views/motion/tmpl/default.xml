@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_GAVOTING_TITLE_ITEM_VIEW_MOTION" option="View">
+        <message>
+                        <![CDATA[COM_GAVOTING_TITLE_ITEM_VIEW_MOTION_DESC]]>
+        </message>
+    </layout>
+</metadata>

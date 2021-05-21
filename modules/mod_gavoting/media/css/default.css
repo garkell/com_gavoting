@@ -1,0 +1,60 @@
+/*
+# ------------------------------------------------------------------------
+# @copyright   Copyright (C) 2014. All rights reserved.
+# @license     GNU General Public License version 2 or later; see LICENSE.txt
+# Author:      Glenn Arkell
+# Websites:    http://www.glennarkell.com.au
+# ------------------------------------------------------------------------
+*/
+
+@font-face {
+  font-family: 'GlyphiconsHalflings';
+  src: url("../fonts/glyphicons-halflings-regular.eot");
+  src: local('GlyphiconsHalflings'),
+    url("../fonts/glyphicons-halflings-regular.eot") format("embedded-opentype"),
+    url("../fonts/glyphicons-halflings-regular.woff") format("woff"),
+    url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
+    url("../fonts/glyphicons-halflings-regular.svg") format("svg");
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  margin-top: -10px;
+  display: inline-block;
+  font-family: 'GlyphiconsHalflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-chevron-left:before {
+  content: "<";
+}
+
+.glyphicon-chevron-right:before {
+  content: ">";
+}
+
+.dconnects {
+	/* font-size: 80%; */
+}
+p.dconnects {
+	margin-top: 0;
+}
+h2.dconnects, h3.dconnects, h4.dconnects {
+	margin-bottom: 3px;
+}
+td.dconnects {
+	text-align: right;
+}
+
+.table-bordered td {
+    border-top: 1px solid #ddd;
+}
+
+td.sched {
+	text-align: center;
+}

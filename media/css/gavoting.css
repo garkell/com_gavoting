@@ -1,0 +1,143 @@
+.icon-mentors {
+      background-image: url(../images/icon-mentors.png);
+      background-repeat: no-repeat;
+      background-size: 26px;
+      width: 26px !important;
+      height: 26px !important;
+      line-height: 36px !important;
+      background-position: 0px 3px;
+}
+
+.icon-mentees {
+      background-image: url(../images/icon-mentors.png);
+      background-repeat: no-repeat;
+      background-size: 26px;
+      width: 26px !important;
+      height: 26px !important;
+      line-height: 36px !important;
+      background-position: 0px 3px;
+}
+
+.icon-agreements {
+      background-image: url(../images/icon-agreements.png);
+      background-repeat: no-repeat;
+      background-size: 26px;
+      width: 26px !important;
+      height: 26px !important;
+      line-height: 36px !important;
+      background-position: 0px 3px;
+}
+
+.icon-reports {
+      background-image: url(../images/icon-reports.png);
+      background-repeat: no-repeat;
+      background-size: 26px;
+      width: 26px !important;
+      height: 26px !important;
+      line-height: 36px !important;
+      background-position: 0px 3px;
+}
+
+.color-box-mentors {
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}
+
+.icon-publish {
+	color: #51a351;
+}
+.icon-unpublish,
+.icon-trash {
+	color: #bd362f;
+}
+.icon-minus {
+	color: #cc4fc6;
+}
+.icon-archive {
+	color: #227cd1;
+}
+.icon-edit {
+	color: #eac42a;
+}
+.icon-goldstar {
+	color: #eac42a;
+}
+.icon-operation:before {
+	color: #444;
+    content: ":";
+}
+
+/*  A = star, S = magnify, D = calendar, F = life bouy, G = bigTick, H = triangle!, J = crossinCircle, K = minusInCircle, L = dustbin, : = spanner  */
+/*  Q = download, W = music, E = question, R = upload, T = funnel, Y = check, I = bigCross, O = inbox, P = full-inbox, { = fastForward, } = fullBack, | = fastRewind */
+/*  Z = 3dots, X = 4dots, C = calendar, V = play, B = star, N = openEnvelope, M = closedEnvelope, < = eye, > = tickSquare, ? = squareinsquare*/
+/*  ~ = tilda, @ = hollowStar, # = padlock, $ = speachbubble, % = conversation, ^ = bigMinus, & = OutOfBox, * = plusInCircle, ( = undo, ) = newDoc, _ = key, + = penPaper*/
+.icon-email:before {
+	color: #51a351;
+    content: "N";
+}
+.icon-agreed:before {
+	color: #51a351;
+    content: "G";
+}
+.icon-notagreed:before {
+	color: #bd362f;
+    content: "I";
+}
+.icon-male:before {
+	color: #4375d1;
+    content: "\42";
+}
+.icon-female:before {
+	color: #eb7cb9;
+    content: "\42";
+}
+.icon-other:before {
+	color: #000000;
+    content: "\42";
+}
+.icon-addcomment:before {
+	color: #444444;
+    content: "$";
+}
+.icon-goldstar:before {
+	color: #eac42a;
+    content: "B";
+}
+
+
+.zoom {
+	padding: 1px;
+	transition: transform .2s; /* Animation */
+	width: 100px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.zoom:hover {
+	transform: scale(5.5); /* 850% */
+}
+
+.tooltip {
+	color: #808ec5;
+}
+
+div.modal-header h3 {
+	color:#3c4d91;
+}
+span.spacerheader,
+div.spacerheader,
+div.spacerheader > label {
+	width: 220px;
+	font: italic small-caps bold 18px/30px Arial, sans-serif;
+}
+.form-horizontal .controls {
+	margin-left: 240px !important;
+}
+.chzn-container {
+	margin-left: 0px;
+}
+

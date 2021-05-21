@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset label="COM_GAVOTING_COMPONENT_LABEL" name="gavoting" addfieldpath="administrator/components/com_gavoting/models/fields">
+
+        <field name="limited_office" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_LIMITED_OFFICE_LABEL"
+             description="COM_GAVOTING_LIMITED_OFFICE_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="election_number" type="text" default="4" showon="limited_office:1"
+             label="COM_GAVOTING_ELECTION_NUMBER_LABEL"
+             description="COM_GAVOTING_ELECTION_NUMBER_DESC" />
+
+        <field name="agm_date" type="calendar" default="NOW"
+             filter="user_utc" showtime="true" format="%Y-%m-%d %H:%M" timeformat="12" singleheader="false"
+             todaybutton="false" weeknumbers="false"
+			 label="COM_GAVOTING_AGM_DATE_LABEL"
+             description="COM_GAVOTING_AGM_DATE_DESC" />
+
+        <field name="close_noms" type="calendar"
+             filter="user_utc" showtime="true" format="%Y-%m-%d %H:%M" timeformat="12" singleheader="false"
+             todaybutton="false" weeknumbers="false"
+             label="COM_GAVOTING_CLOSE_NOMS_LABEL"
+             description="COM_GAVOTING_CLOSE_NOMS_DESC" />
+
+        <field name="open_votes" type="calendar"
+             filter="user_utc" showtime="true" format="%Y-%m-%d %H:%M" timeformat="12" singleheader="false"
+             todaybutton="false" weeknumbers="false"
+             label="COM_GAVOTING_OPEN_VOTES_LABEL"
+             description="COM_GAVOTING_OPEN_VOTES_DESC" />
+
+        <field name="close_votes" type="calendar"
+             filter="user_utc" showtime="true" format="%Y-%m-%d %H:%M" timeformat="12" singleheader="false"
+             todaybutton="false" weeknumbers="false"
+             label="COM_GAVOTING_CLOSE_VOTES_LABEL"
+             description="COM_GAVOTING_CLOSE_VOTES_DESC" />
+
+    </fieldset>
+
+    <fieldset label="COM_GAVOTING_MEMBERS" name="gavotingmembers" addfieldpath="administrator/components/com_gavoting/models/fields">
+
+        <field name="excl_user_gp" type="usergrouplist" multiple="multiple"
+             label="COM_GAVOTING_EXCL_USER_GP_LABEL"
+             description="COM_GAVOTING_EXCL_USER_GP_DESC" />
+
+        <field name="restrict_nomees" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_RESTRICT_NOMEES_LABEL"
+             description="COM_GAVOTING_RESTRICT_NOMEES_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="nomees_user_gp" type="usergrouplist" showon="restrict_nomees:1"
+             label="COM_GAVOTING_NOMEES_USER_GP_LABEL"
+             description="COM_GAVOTING_NOMEES_USER_GP_DESC" />
+
+        <field name="restrict_nomtors" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_RESTRICT_NOMTORS_LABEL"
+             description="COM_GAVOTING_RESTRICT_NOMTORS_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="nomtors_user_gp" type="usergrouplist" showon="restrict_nomtors:1"
+             label="COM_GAVOTING_NOMTORS_USER_GP_LABEL"
+             description="COM_GAVOTING_NOMTORS_USER_GP_DESC" />
+
+        <field name="restrict_voters" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_RESTRICT_VOTERS_LABEL"
+             description="COM_GAVOTING_RESTRICT_VOTERS_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="voters_user_gp" type="usergrouplist" showon="restrict_voters:1"
+             label="COM_GAVOTING_VOTERS_USER_GP_LABEL"
+             description="COM_GAVOTING_VOTERS_USER_GP_DESC" />
+
+        <field name="bundle_region" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_BUNDLE_REGION_LABEL"
+             description="COM_GAVOTING_BUNDLE_REGION_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="custom_profile" type="radio" class="btn-group btn-group-yesno" default="1" showon="bundle_region:1"
+             label="COM_GAVOTING_CUSTOM_PROFILE_LABEL"
+             description="COM_GAVOTING_CUSTOM_PROFILE_DESC">
+                 <option value="0">COM_GAVOTING_CUSTOM_FIELD</option>
+                 <option value="1">COM_GAVOTING_PROFILE_REGION</option>
+        </field>
+
+        <field name="custom_user_fld" type="customfield" showon="custom_profile:0"
+             label="COM_GAVOTING_CUSTOM_USER_FLD_LABEL"
+             description="COM_GAVOTING_CUSTOM_USER_FLD_DESC" />
+
+    </fieldset>
+
+    <fieldset label="COM_GAVOTING_RULES" name="gavotingrules" addfieldpath="administrator/components/com_gavoting/models/fields">
+
+        <field name="allow_proxy" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_ALLOW_PROXY_LABEL"
+             description="COM_GAVOTING_ALLOW_PROXY_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+        <field name="proxy_type" type="radio" class="btn-group btn-group-yesno" default="0" showon="allow_proxy:1"
+             label="COM_GAVOTING_PROXY_TYPE_LABEL"
+             description="COM_GAVOTING_PROXY_TYPE_DESC">
+                 <option value="0">COM_GAVOTING_PROXY_GENERAL</option>
+                 <option value="1">COM_GAVOTING_PROXY_SPECIFIC</option>
+                 <option value="2">COM_GAVOTING_PROXY_HYBRID</option>
+        </field>
+        <field name="dupl_vote" type="radio" class="btn-group btn-group-yesno" default="0" showon="proxy_type:0"
+             label="COM_GAVOTING_DUPL_VOTE_LABEL"
+             description="COM_GAVOTING_DUPL_VOTE_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="single_mship" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_SINGLE_MSHIP_LABEL"
+             description="COM_GAVOTING_SINGLE_MSHIP_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+        <field name="smship_spacer" type="spacer" showon="single_mship:1"
+             label="COM_GAVOTING_SMSHIP_SPACER_LABEL" default="Profile must have full name of partner."
+             description="COM_GAVOTING_SMSHIP_SPACER_DESC" />
+
+        <field name="profile_suffix" type="text" filter="safehtml" showon="single_mship:1"
+             label="COM_GAVOTING_PROFILE_SUFFIX_LABEL"
+             description="COM_GAVOTING_PROFILE_SUFFIX_DESC" />
+
+        <field name="profile_field" type="proffields" showon="single_mship:1"
+             label="COM_GAVOTING_PROFILE_FIELD_LABEL"
+             description="COM_GAVOTING_PROFILE_FIELD_DESC" />
+
+        <field name="ignore_prefix" type="text" filter="safehtml"
+             label="COM_GAVOTING_IGNORE_PREFIX_LABEL"
+             description="COM_GAVOTING_IGNORE_PREFIX_DESC" />
+
+        <field name="auto_accept" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_AUTO_ACCEPT_LABEL"
+             description="COM_GAVOTING_AUTO_ACCEPT_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+        <field name="disp_unaccept" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_DISP_UNACCEPT_LABEL"
+             description="COM_GAVOTING_DISP_UNACCEPT_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+        <field name="show_votes" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_SHOW_VOTES_LABEL"
+             description="COM_GAVOTING_SHOW_VOTES_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+        <field name="req_sec_nom" type="radio" class="btn-group btn-group-yesno" default="1"
+             label="COM_GAVOTING_REQ_SEC_NOM_LABEL"
+             description="COM_GAVOTING_REQ_SEC_NOM_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="extra_rules" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_EXTRA_RULES_LABEL"
+             description="COM_GAVOTING_EXTRA_RULES_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="specific_rules" type="editor" filter="safehtml" buttons="false" showon="extra_rules:1"
+             label="COM_GAVOTING_SPECIFIC_RULES_LABEL"
+             description="COM_GAVOTING_SPECIFIC_RULES_DESC" />
+
+    </fieldset>
+
+    <fieldset label="COM_GAVOTING_TITLE_MOTIONS" name="gavotingmotions" addfieldpath="administrator/components/com_gavoting/models/fields">
+
+        <field name="notag_colour" type="color"
+             label="COM_GAVOTING_NOTAG_COLOUR_LABEL"
+             description="COM_GAVOTING_NOTAG_COLOUR_DESC" />
+
+        <field name="req_sec_mot" type="radio" class="btn-group btn-group-yesno" default="1"
+             label="COM_GAVOTING_REQ_SEC_MOT_LABEL"
+             description="COM_GAVOTING_REQ_SEC_MOT_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset label="COM_GAVOTING_TITLE_MULTIUSER" 
+		name="gavotingmultiuser" addfieldpath="administrator/components/com_gavoting/models/fields"
+		description="COM_GAVOTING_TITLE_MULTIUSER_DESC">
+
+        <field name="multi_users" type="radio" class="btn-group btn-group-yesno" default="0"
+             label="COM_GAVOTING_MULTI_USERS_LABEL"
+             description="COM_GAVOTING_MULTI_USERS_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
+        <field name="linkcust_field" type="customfield" showon="multi_users:1"
+             label="COM_GAVOTING_LINKCUST_FIELD_LABEL"
+             description="COM_GAVOTING_LINKCUST_FIELD_DESC" />
+
+    </fieldset>
+
+    <fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+        <field name="rules" type="rules" component="com_gavoting" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+
+    <fieldset name="component">
+        <field name="save_history" type="radio" class="btn-group btn-group-yesno" default="0" label="JGLOBAL_SAVE_HISTORY_OPTIONS_LABEL" description="JGLOBAL_SAVE_HISTORY_OPTIONS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+
+        <field name="history_limit" type="text" filter="integer" label="JGLOBAL_HISTORY_LIMIT_OPTIONS_LABEL" description="JGLOBAL_HISTORY_LIMIT_OPTIONS_DESC" default="5"/>
+    </fieldset>
+</config>

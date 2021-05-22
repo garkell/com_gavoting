@@ -1031,7 +1031,8 @@ class GavotingHelper
 	
 			$Listlink = '';
 			foreach ($linkList AS $lnk) {
-				// scroll through records to load the id reference as a string
+				// scroll through records to load the id reference or a string
+				$lnk = is_numeric($lnk) ? $lnk : '"'.$lnk.'"';
 				$Listlink .= $lnk . ',';
 		    }
 	        $Listlink = substr($Listlink,0,-1);

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version     1.4.04
+ * @version     1.4.06
  * @package     com_gavoting
  * @copyright   Copyright (C) 2011. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt

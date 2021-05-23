@@ -889,13 +889,19 @@ class GavotingHelper
 		$ignore_prefix = $params->get('ignore_prefix','noemail');
 		$emailLen = strlen($ignore_prefix);
 
-		if ($emailLen > 0 && substr($voter->email, 0, $emailLen) == $ignore_prefix ) {
+		if (substr($voter->email, 0, $emailLen) == $ignore_prefix ) {
+			// don't do anything
+		} else {
 			$recipients = array($voter->email);
 			GavotingHelper::sendEmail($recipients, $body, $subject, 0, 0);
+			Factory::getApplication()->enqueueMessage(Text::sprintf('COM_GAVOTING_VOTE_CAST_OK',$voter->name), 'message');
 		}
-		if ($emailLen > 0 && substr($proxy->email, 0, $emailLen) == $ignore_prefix ) {
+		if (substr($proxy->email, 0, $emailLen) == $ignore_prefix ) {
+			// don't do anything
+		} else {
 			$recipients = array($proxy->email);
 			GavotingHelper::sendEmail($recipients, $body, $subject, 0, 0);
+			Factory::getApplication()->enqueueMessage(Text::sprintf('COM_GAVOTING_VOTE_CAST_OK',$proxy->name), 'message');
 		}
 
 		return true;

@@ -878,8 +878,8 @@ class GavotingHelper
 	public static function sendVotingEmail($voter = 0, $proxy = 0, $posvotes, $params)
 	{
 		$subject = Text::_('COM_GAVOTING_VOTING_EMAIL_SUBJECT');
-		$body = '<p>'.Text::sprintf('COM_GAVOTING_VOTING_EMAIL_DEAR',$voter->name).',</p>';
-		$body .= '<p>'.Text::sprintf('COM_GAVOTING_VOTING_EMAIL_INTRO').$proxy->name.'</p>';
+		$body = '<p>'.Text::sprintf('COM_GAVOTING_VOTING_EMAIL_DEAR',$proxy->name).',</p>';
+		$body .= '<p>'.Text::sprintf('COM_GAVOTING_VOTING_EMAIL_INTRO').$voter->name.'</p>';
 		$body .= '<p>';
 		foreach ($posvotes AS $k => $v) {
 			$body .= $k.' = '.$v.'<br />';

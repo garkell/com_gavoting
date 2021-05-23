@@ -120,6 +120,13 @@
                  <option value="1">JYES</option>
         </field>
 
+        <field name="notif_proxy" type="radio" class="btn-group btn-group-yesno" default="0" showon="allow_proxy:1"
+             label="COM_GAVOTING_NOTIF_PROXY_LABEL"
+             description="COM_GAVOTING_NOTIF_PROXY_DESC">
+                 <option value="0">JNO</option>
+                 <option value="1">JYES</option>
+        </field>
+
         <field name="single_mship" type="radio" class="btn-group btn-group-yesno" default="0"
              label="COM_GAVOTING_SINGLE_MSHIP_LABEL"
              description="COM_GAVOTING_SINGLE_MSHIP_DESC">

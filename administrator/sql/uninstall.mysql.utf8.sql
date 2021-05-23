@@ -1,5 +1,7 @@
-DROP TABLE IF EXISTS `#__gafoodbank_foodorders`;
+DROP TABLE IF EXISTS `#__gavoting_positions`;
+DROP TABLE IF EXISTS `#__gavoting_nominations`;
+DROP TABLE IF EXISTS `#__gavoting_voters`;
+DROP TABLE IF EXISTS `#__gavoting_motions`;
 
-DELETE from `#__content_types` WHERE `type_alias` = 'com_gafoodbank';
-DELETE from `#__content_types` WHERE `type_alias` = 'com_gafoodbank.category';
-DELETE from `#__categories` WHERE `extension` = 'com_gafoodbank';
+DELETE from `#__content_types` WHERE `type_alias` = 'com_gavoting';
+DELETE from `#__categories` WHERE `extension` = 'com_gavoting';

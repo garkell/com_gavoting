@@ -7,7 +7,7 @@
     <author>Glenn Arkell</author>
     <authorEmail>glenn@glennarkell.com.au</authorEmail>
     <authorUrl>http://www.glennarkell.com.au</authorUrl>
-    <version>1.4.05</version>
+    <version>1.4.06</version>
     <description>COM_GAVOTING_XML_DESCRIPTION</description>
     
 	<scriptfile>script.php</scriptfile>

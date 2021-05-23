@@ -867,6 +867,40 @@ class GavotingHelper
         return true;
 	}
 
+	/**
+	 * Setup the email notifications of voting
+	 * @params object voter		user record
+	 * @params object proxy		user record
+	 * @params array posvotes	position and vote collection
+	 * @params object params	component parameters
+	 * @return boolean
+	 */
+	public static function sendVotingEmail($voter = 0, $proxy = 0, $posvotes, $params)
+	{
+		$subject = Text::_('COM_GAVOTING_VOTING_EMAIL_SUBJECT');
+		$body = '<p>'.Text::sprintf('COM_GAVOTING_VOTING_EMAIL_DEAR',$voter->name).',</p>';
+		$body .= '<p>'.Text::sprintf('COM_GAVOTING_VOTING_EMAIL_INTRO').$proxy->name.'</p>';
+		$body .= '<p>';
+		foreach ($posvotes AS $k => $v) {
+			$body .= $k.' = '.$v.'<br />';
+		}
+		$body .= '</p><p> </p><p>'.Text::_('COM_GAVOTING_VOTING_DISPUTE').'</p>';
+
+		$ignore_prefix = $params->get('ignore_prefix','noemail');
+		$emailLen = strlen($ignore_prefix);
+
+		if ($emailLen > 0 && substr($voter->email, 0, $emailLen) == $ignore_prefix ) {
+			$recipients = array($voter->email);
+			GavotingHelper::sendEmail($recipients, $body, $subject, 0, 0);
+		}
+		if ($emailLen > 0 && substr($proxy->email, 0, $emailLen) == $ignore_prefix ) {
+			$recipients = array($proxy->email);
+			GavotingHelper::sendEmail($recipients, $body, $subject, 0, 0);
+		}
+
+		return true;
+	}
+
     public static function sendEmail($recipients, $body, $subject, $attachfile, $replyTo = 0)
 	{
 	    $app		= Factory::getApplication();
